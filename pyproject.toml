@@ -5,7 +5,8 @@ description = "Import markdown files from joplin to obsidian"
 authors = ["githubfzq <u201312526@alumni.hust.edu.cn>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
+argparse = "^1.4.0"
 
 [tool.poetry.dev-dependencies]
 
