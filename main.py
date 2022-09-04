@@ -8,7 +8,7 @@ def main():
     parser = ArgumentParser(prog="joplin2obsidian")
     parser.add_argument(
         '-s', '--source-dir', type=Path,
-        help='Specify the source directory where Joplin exported the RAW data'
+        help='Specify the source directory where Joplin exported the MD data'
     )
     parser.add_argument(
         '-d', '--destination-dir', type=Path,
