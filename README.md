@@ -50,7 +50,7 @@ usage: joplin2obsidian [-h] [-s SOURCE_DIR] [-d DESTINATION_DIR]
 options:
   -h, --help            show this help message and exit
   -s SOURCE_DIR, --source-dir SOURCE_DIR
-                        Specify the source directory where Joplin exported the RAW data
+                        Specify the source directory where Joplin exported the MD data
   -d DESTINATION_DIR, --destination-dir DESTINATION_DIR
                         The destination directory of Obsidian vault
 ```
