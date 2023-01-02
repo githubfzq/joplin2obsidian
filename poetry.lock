@@ -7,12 +7,40 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "autopep8"
+version = "2.0.1"
+description = "A tool that automatically formats Python code to conform to the PEP 8 style guide"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+pycodestyle = ">=2.10.0"
+tomli = {version = "*", markers = "python_version < \"3.11\""}
+
+[[package]]
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
+name = "pycodestyle"
+version = "2.10.0"
+description = "Python style guide checker"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "tomli"
+version = "2.0.1"
+description = "A lil' TOML parser"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
 
 [[package]]
 name = "tqdm"
@@ -34,17 +62,20 @@ telegram = ["requests"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "0ca271815d5c84ad3b95ab7cab6ebc330d14e7b570f63cc7061ae8a4f74044db"
+content-hash = "23a1e3657c9bb942119eff0bc5ebb9cb52f73f65eca3c925b17a2e0d699b8702"
 
 [metadata.files]
 argparse = [
     {file = "argparse-1.4.0-py2.py3-none-any.whl", hash = "sha256:c31647edb69fd3d465a847ea3157d37bed1f95f19760b11a47aa91c04b666314"},
     {file = "argparse-1.4.0.tar.gz", hash = "sha256:62b089a55be1d8949cd2bc7e0df0bddb9e028faefc8c32038cc84862aefdd6e4"},
 ]
+autopep8 = []
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
 ]
+pycodestyle = []
+tomli = []
 tqdm = [
     {file = "tqdm-4.64.0-py2.py3-none-any.whl", hash = "sha256:74a2cdefe14d11442cedf3ba4e21a3b84ff9a2dbdc6cfae2c34addb2a14a5ea6"},
     {file = "tqdm-4.64.0.tar.gz", hash = "sha256:40be55d30e200777a307a7585aee69e4eabb46b4ec6a4b4a5f2d9f11e7d5408d"},
