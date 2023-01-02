@@ -4,6 +4,7 @@ import re
 
 class MdHandler:
     img_re = re.compile(r"<img.*/>")
+    number_re = re.compile(r"\#(?![\#\s])")
 
     def __init__(self, file_path: Path):
         self.file_path = file_path
@@ -12,7 +13,9 @@ class MdHandler:
     def replace_iter(self):
         with self.file_path.open('r') as f:
             for line in f.readlines():
-                yield self.img_re.sub(self._sub_group, line)
+                attached = self.img_re.sub(self._sub_group, line)
+                escaped = self.number_re.sub('\#', attached)
+                yield escaped
     
     def _sub_group(self, matchobj: re.Match):
         html = matchobj.group(0)

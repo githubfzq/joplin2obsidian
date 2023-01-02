@@ -29,7 +29,7 @@ git clone https://github.com/githubfzq/joplin2obsidian.git
 
 ### 
 
-1. Firstly, Open Joplin, export *selected notes*, or *specific notebook*, or *all data* (notes and corresponding resources) as **MD - Markdown** to a directory.
+1. Firstly, Open Joplin, export *selected notes*, or *specific notebook*, or *all data* (notes and corresponding resources) as **MD - Markdown + 文章前言** to a directory.
 
 2. Run command:
 ```
