@@ -9,7 +9,9 @@ class MdHandler:
     
     
     def replace_iter(self):
-        with self.file_path.open('r') as f:
+        # open() defaults to locale.getencoding(), which is cp1252 on windows
+        # for historical purposes. AFAIK, modern windows uses utf-8 everywhere.
+        with self.file_path.open('r', encoding="utf-8") as f:
             for line in f.readlines():
                 yield self.src_re.sub(self._sub_group, line)
     

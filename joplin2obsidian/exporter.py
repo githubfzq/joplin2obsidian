@@ -21,6 +21,9 @@ class Exporter:
             md_handler = MdHandler(md)
             dest_md = self.root_dir / md.relative_to(reader.dir)
             dest_md.parent.mkdir(parents=True, exist_ok=True)
-            with dest_md.open('w') as f:
+            # open() defaults to locale.getencoding(), which is cp1252 on
+            # windows for historical purposes. AFAIK, modern windows uses utf-8
+            # everywhere.
+            with dest_md.open('w', encoding="utf-8") as f:
                 for res_line in md_handler.replace_iter():
                     f.write(res_line)
